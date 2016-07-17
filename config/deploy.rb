@@ -3,6 +3,7 @@ lock '3.5.0'
 
 set :application, 'deploy_test'
 set :repo_url, 'git@github.com:interstellaridea/deploy_test.git'
+set :passenger_reset_with_touch, true
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

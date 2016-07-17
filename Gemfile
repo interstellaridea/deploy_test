@@ -45,12 +45,14 @@ group :development do
   gem 'spring'
 
   #added by me
-	#gem 'capistrano', '~> 3.5'
+	gem 'capistrano', '~> 3.5'
 	gem 'capistrano-bundler', '~> 1.1.2'
 	gem 'capistrano-rails', '~> 1.1', '>= 1.1.7'
 
 	# Add this if you're using rbenv
 	gem 'capistrano-rbenv', github: "capistrano/rbenv"
+
+	gem 'capistrano-passenger'
 
 
 end
