@@ -46,11 +46,13 @@ namespace :zoom do
     url = zoomAPI( 'user/getbyemail', :login_type=>101, :email=>"#{args.email}" )
     # POST request to Zoom base API URL
     response = HTTParty.post(url)
+
     # Save ID
     id = response['id']
 
-    print " USER ID is : #{id}"
-    print "\n"
+    print "Code response was #{response.code} \n"
+
+    print " USER ID is : #{id} \n"
   end
 
 
