@@ -54,4 +54,17 @@ namespace :deploy do
 
   after :publishing, 'deploy:restart'
   after :finishing, 'deploy:cleanup'
+
+  desc "Invoke rake task"
+  task :invoke do
+    on roles(:app) do
+      within "#{current_path}" do
+        with rails_env: :production do
+					execute :rake, ENV['task']
+					# !!!see NOTE at end of answer!!!
+        end
+      end
+    end
+  end
+
 end
